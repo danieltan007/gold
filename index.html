@@ -17,8 +17,10 @@
      </head>
 
      <style>
-          body {
+          body,
+          html {
                height: 100%;
+               margin: 0;
           }
 
           .navbar-brand {
@@ -30,17 +32,6 @@
                background-color: rgba(0, 0, 0, 0.5);
                color: #ffffff;
           }
-
-          /* img {
-               z-index: -1;
-               position: inherit;
-               height: 100%;
-               width: 100%;
-               display: block;
-               background-position: center;
-               background-repeat: no-repeat;
-               background-size: cover;
-          } */
 
           h1 {
                font-size: 72px;
@@ -68,12 +59,11 @@
           }
 
           section {
-               height: 100vh;
-               width: auto;
-               background-size: cover;
+               height: 100%;
                background-position: center;
                background-size: cover;
-               image-orientation: from-image;
+               background-repeat: no-repeat;
+               image-rendering: crisp-edges;
           }
 
           section#home {
@@ -85,34 +75,65 @@
           }
 
           section#features {
-               background-image: url("assets/features.jpg");
+               background-image: url(assets/features.jpg);
           }
+
+          section#requirements {
+               background-image: url(assets/requirements.png);
+               background-size: contain;
+               background-color: black;
+          }
+
+          section#top-score {
+               background-image: url(assets/top-score-bg.png);
+          }
+
+          section#newsletter {
+               background-image: url(assets/newsletter.png);
+          }
+
+          .list {
+               font-size: 200%;
+               list-style-type: circle;
+          }
+
+          .text-warning {
+               font-size: 24px;
+          }
+
+          /* li.list:first-child::before {
+               content: "";
+               position: relative;
+               left: -24px;
+               top: 29px;
+               border-left: 2px solid white;
+               height: fit-content;
+          } */
      </style>
 
      <body>
           <section id="home">
-               <!-- <img src="assets/main-bg.jpg" alt="main-bg" id="main-image" class="img-fluid" /> -->
                <nav class="navbar navbar-dark p-2">
                     <a class="navbar-brand" href="#"><i class="bi-github" role="img" aria-label="GitHub"></i> Ujian
                          Gold</a>
                     <ul class="nav justify-content-center">
                          <li class="nav-item">
-                              <a class="nav-link" href="#home">Home</a>
+                              <a class="nav-link text-white" href="#home">Home</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#">Work</a>
+                              <a class="nav-link text-white" href="#">Work</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#">Contact</a>
+                              <a class="nav-link text-white" href="#">Contact</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#">About Me</a>
+                              <a class="nav-link text-white" href="#">About Me</a>
                          </li>
                     </ul>
 
                     <ul class="nav navbar d-flex">
-                         <li class="nav-item"><a href="#" class="nav-link">Sign Up</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-white">Sign Up</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link text-white">Login</a></li>
                     </ul>
                </nav>
                <div align="center" id="main-center">
@@ -132,7 +153,6 @@
           </section>
 
           <section id="the-games">
-               <!-- <img src="assets/the-games-bg.jpg" alt="the-games" class="img-fluid" /> -->
                <div class="container-fluid p-5">
                     <div class="row" style="top: 25vh; position: relative">
                          <div class="col-4" align="center" style="color: white">
@@ -189,27 +209,109 @@
                               </div>
                          </div>
                     </div>
-
                </div>
           </section>
 
           <section id="features">
-               <!-- <img src="assets/features.jpg" alt="features" class="img-fluid" /> -->
                <div class="container-fluid">
-
+                    <div class="row">
+                         <div class="col" align="center"></div>
+                         <div class="col-5 py-5" style="color: #ffffff">
+                              <h3>What's so special?</h3>
+                              <h1>FEATURES</h1>
+                              <br><br>
+                              <ul class="features">
+                                   <li class="list" style="color:#FFB548;">
+                                        <h3>TRADITIONAL GAMES</h3>
+                                   </li>
+                                   <p style="font-size: 18px;">if you miss your childhood, we provide many traditional
+                                        games here</p>
+                                   <br><br>
+                                   <li class="list" style="color:#FFB548;">
+                                        <h3>GAME SUIT</h3>
+                                   </li>
+                                   <li class="list" style="color:#FFB548;">
+                                        <h3>TBD</h3>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
                </div>
           </section>
 
           <section id="requirements">
-               <!-- <img src="assets/requirements.png" alt="requirements" class="img-fluid" style="display: block" /> -->
+               <div class="container">
+                    <br><br>
+                    <p align="center" class="text-white" style="font-size: 24px;">Can My Computer Run this Game?</p>
+                    <br><br>
+                    <div class="row">
+                         <div class="col text-white">
+                              <h1>SYSTEM REQUIREMENTS</h1>
+                              <br><br>
+                              <table class="table table-bordered text-white" style="font-size: 18px;">
+                                   <tr>
+                                        <td>
+                                             <div class="text-warning">OS:</div>
+                                             Windows 7 64-bit only
+                                             (No OSX support at this time)
+                                        </td>
+                                        <td>
+                                             <div class="text-warning">PROCESSOR:</div>
+                                             Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td>
+                                             <div class="text-warning">MEMORY:</div>
+                                             4 GB RAM
+                                        </td>
+                                        <td>
+                                             <div class="text-warning">Storage:</div>
+                                             8 GB available space
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td colspan="2">
+                                             <div class="text-warning">GRAPHICS: </div>
+                                             NVIDIA GeForce GTX 660 2GB or <br>
+                                             AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+                                        </td>
+                                   </tr>
+                              </table>
+                         </div>
+                         <div class="col">
+
+                         </div>
+                    </div>
+               </div>
           </section>
 
           <section id="top-score">
-               <!-- <img src="assets/top-score-bg.png" alt="top-score" class="img-fluid" /> -->
+               <div class="container">
+                    <div class="row">
+                         <div class="col" align="center" style="bottom:-50vh;">
+                              <h1 align="center text-white">TOP SCORES</h1>
+                              <br>
+                              <p class="text-white">This top score from various games provided on this platform </p>
+                              <br><br>
+                              <a class="btn bg-warning btn-lg" href="#">See More</a>
+                         </div>
+                         <div class="col">
+
+                         </div>
+                    </div>
+               </div>
           </section>
 
           <section id="newsletter">
-               <!-- <img src="assets/newsletter.png" alt="newsletter" class="img-fluid" /> -->
+               <div class="container-fluid">
+                    
+               </div>
+
+               <footer>
+                    <!-- create horizontal line -->
+                    <hr color="white" width="80%" align="center" size="2px" />
+               </footer>
           </section>
      </body>
 
