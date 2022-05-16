@@ -6,21 +6,38 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta http-equiv="X-UA-Compatible" content="ie=edge" />
           <meta name="Description" content="Enter your description here" />
-          <link rel="stylesheet"
+          <!-- <link rel="stylesheet"
                href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+               crossorigin="anonymous"></script> -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+               integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+               crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
                crossorigin="anonymous"></script>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
           <title>Ujian Gold</title>
      </head>
 
      <style>
+          .footer-link {
+               border-right: 1px solid #fff;
+               line-height: 2px;
+          }
+
+
           body,
           html {
                height: 100%;
                margin: 0;
+          }
+
+          a {
+               text-decoration: none;
+               color: #ffffff;
           }
 
           .navbar-brand {
@@ -63,7 +80,6 @@
                background-position: center;
                background-size: cover;
                background-repeat: no-repeat;
-               image-rendering: crisp-edges;
           }
 
           section#home {
@@ -100,41 +116,46 @@
           .text-warning {
                font-size: 24px;
           }
-
-          /* li.list:first-child::before {
-               content: "";
-               position: relative;
-               left: -24px;
-               top: 29px;
-               border-left: 2px solid white;
-               height: fit-content;
-          } */
      </style>
 
      <body>
           <section id="home">
-               <nav class="navbar navbar-dark p-2">
-                    <a class="navbar-brand" href="#"><i class="bi-github" role="img" aria-label="GitHub"></i> Ujian
-                         Gold</a>
-                    <ul class="nav justify-content-center">
-                         <li class="nav-item">
-                              <a class="nav-link text-white" href="#home">Home</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link text-white" href="#">Work</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link text-white" href="#">Contact</a>
-                         </li>
-                         <li class="nav-item">
-                              <a class="nav-link text-white" href="#">About Me</a>
-                         </li>
-                    </ul>
-
-                    <ul class="nav navbar d-flex">
-                         <li class="nav-item"><a href="#" class="nav-link text-white">Sign Up</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link text-white">Login</a></li>
-                    </ul>
+               <nav class="navbar navbar-expand-md navbar-dark">
+                    <div class="container-fluid">
+                         <a class="navbar-brand" href="#"><i class="bi-github" role="img" aria-label="GitHub"></i> Ujian
+                              Gold
+                         </a>
+                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                              aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                         </button>
+                         <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                              <ul class="navbar-nav">
+                                   <li class="nav-item">
+                                        <a class="nav-link text-white" href="#home">Home</a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">Work</a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">Contact</a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a class="nav-link text-white" href="#">About Me</a>
+                                   </li>
+                              </ul>
+                              <!-- place on the right end -->
+                              <ul class="navbar-nav align-self-end">
+                                   <li class="nav-item">
+                                        <a href="#" class="nav-link text-white">Sign Up</a>
+                                   </li>
+                                   <li class="nav-item">
+                                        <a href="#" class="nav-link text-white">Login</a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
                </nav>
                <div align="center" id="main-center">
                     <h1 align="center">PLAY TRADITIONAL GAME</h1>
@@ -288,29 +309,166 @@
 
           <section id="top-score">
                <div class="container">
-                    <div class="row">
-                         <div class="col" align="center" style="bottom:-50vh;">
-                              <h1 align="center text-white">TOP SCORES</h1>
+                    <div class="row align-items-center">
+                         <div class="col" align="center">
+                              <h1 align="center" class="text-white">TOP SCORES</h1>
                               <br>
                               <p class="text-white">This top score from various games provided on this platform </p>
                               <br><br>
                               <a class="btn bg-warning btn-lg" href="#">See More</a>
                          </div>
-                         <div class="col">
-
+                         <div class="col mt-5 pt-5">
+                              <div class="row">
+                                   <!-- create user review -->
+                                   <div class="col">
+                                        <div class="card text-white"
+                                             style="background-color:rgba(255, 255, 255, 0.08);">
+                                             <div class="card-body">
+                                                  <div class="row">
+                                                       <div class="col-md-3">
+                                                            <img src="assets/evan-lahti.jpg" class="rounded-circle"
+                                                                 alt="avatar">
+                                                       </div>
+                                                       <div class="col-md-9">
+                                                            <div class="card-title text-wrap">
+                                                                 <h5 class="card-title text-warning">Evan Lahti</h5>
+                                                                 PC Gamer
+                                                            </div>
+                                                            <p class="card-text">“One of my gaming highlights of the
+                                                                 year.”</p>
+                                                            <p class="card-text">
+                                                                 <small class="text-white-50">June 18, 2021</small>
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <br>
+                              <div class="row justify-content-between">
+                                   <!-- create user review -->
+                                   <div class="col-1"></div>
+                                   <div class="col p-3">
+                                        <div class="card text-white"
+                                             style="background-color:rgba(255, 255, 255, 0.08);">
+                                             <div class="card-body">
+                                                  <div class="row">
+                                                       <div class="col-md-3">
+                                                            <img src="assets/jada-griffin.jpg" class="rounded-circle"
+                                                                 alt="avatar">
+                                                       </div>
+                                                       <div class="col-md-9">
+                                                            <div class="card-title text-wrap">
+                                                                 <h5 class="card-title text-warning">Jada Griffin</h5>
+                                                                 PC Gamer
+                                                            </div>
+                                                            <p class="card-text">“The next big thing in the world of
+                                                                 streaming and survival games.”
+                                                            </p>
+                                                            <p class="card-text">
+                                                                 <small class="text-white-50">July 10, 2021</small>
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <br>
+                              <div class="row">
+                                   <!-- create user review -->
+                                   <div class="col">
+                                        <div class="card text-white"
+                                             style="background-color:rgba(255, 255, 255, 0.08);">
+                                             <div class="card-body">
+                                                  <div class="row">
+                                                       <div class="col-md-3">
+                                                            <img src="assets/aaron-williams.jpg" class="rounded-circle"
+                                                                 alt="avatar">
+                                                       </div>
+                                                       <div class="col-md-9">
+                                                            <div class="card-title text-wrap">
+                                                                 <h5 class="card-title text-warning">Aaron Williams</h5>
+                                                                 PC Gamer
+                                                            </div>
+                                                            <p class="card-text">“Snoop Dogg Playing The Wildly
+                                                                 Entertaining ‘SOS’ Is Ridiculous.”</p>
+                                                            <p class="card-text">
+                                                                 <small class="text-white-50">December 24, 2021</small>
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
                          </div>
                     </div>
                </div>
           </section>
 
           <section id="newsletter">
-               <div class="container-fluid">
-                    
+               <div class="container">
+                    <div class="row text-white">
+                         <div class="col justify-content-center p-5">
+                              <!-- create black shadow over the image -->
+                              <img src="assets/skull.png" alt="skull" class="img-fluid"
+                                   style="box-shadow: inset 0px 0px 30px 30px rgba(0,0,0);">
+                         </div>
+                         <div class="col p-5">
+                              <h3>Want to stay in <br> touch?</h3>
+                              <h1>NEWSLETTER SUBSCRIBE</h1>
+                              <p>In order to start receiving our news, all you have to do is enter your email address.
+                                   Everything else will be taken care
+                                   of by us. We will send you emails containing information about game. We don’t spam.
+                              </p>
+                              <br>
+                              <form action="#" method="post">
+                                   <div class="input-group">
+                                        <input type="email" name="email" placeholder="Enter your email address"
+                                             class="form-control">
+                                        &nbsp;&nbsp;&nbsp;
+                                        <button type="submit" class="btn btn-warning btn-lg">Subscribe Now</button>
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
                </div>
-
-               <footer>
-                    <!-- create horizontal line -->
-                    <hr color="white" width="80%" align="center" size="2px" />
+               <footer style="font-size:12px;">
+                    <div class="container">
+                         <ul class="nav justify-content-end navbar-dark text-white">
+                              <li class="nav-link"><a href="#">MAIN</a></li>
+                              <li class="nav-link"><a href="#">ABOUT</a></li>
+                              <li class="nav-link"><a href="#">GAME FEATURES</a></li>
+                              <li class="nav-link"><a href="#">SYSTEM REQUIREMENTS</a></li>
+                              <li class="nav-link"><a href="#">QUOTES</a></li>
+                              <li class="nav-link"><a href="#"><img src="assets/facebook.svg" alt="facebook"></a></li>
+                              <li class="nav-link"><a href="#"><img src="assets/twitter.svg" alt="twitter"></a></li>
+                              <li class="nav-link"><a href="#"><img src="assets/youtube.svg" alt="youtube"></a></li>
+                              <li class="nav-link"><a href="#"><img src="assets/twitch.svg" alt="twitch"></a></li>
+                         </ul>
+                         <div align="center">
+                              <hr color="white" width="80%" align="center" size="2px" />
+                         </div>
+                         <br>
+                         <div class="row">
+                              <div class="col-4">
+                                   <p class="text-white">&copy; 2018 Your Games, Inc. All Rights Reserved</p>
+                              </div>
+                              <div class="col-8">
+                                   <ul class="nav justify-content-end text-white" align="right">
+                                        <li class="nav-link footer-link">
+                                             <a href="#">PRIVACY
+                                                  POLICY</a>
+                                        </li>
+                                        <li class="nav-link footer-link"><a href="#">TERMS OF
+                                                  SERVICES</a></li>
+                                        <li class="nav-link footer-link"><a href="#">CODE OF CONDUCT</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
                </footer>
           </section>
      </body>
